@@ -14,6 +14,14 @@ const postSchema = mongoose.Schema(
             type: String,
             required: [true, 'Please add content'],
         },
+        likes: {
+            type: Number,
+            required: false,
+        },
+        comments: {
+            type: [mongoose.Schema.Types.ObjectId],
+            required: false,
+        },
     },
     {
         timestamps: true,
